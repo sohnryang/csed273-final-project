@@ -3,7 +3,9 @@
 // Testbench for LFSR.
 module lfsr_testbench();
     reg clk, rst_n;
-    wire [3:0] out;
+    wire [3:0] out4b;
+    wire [15:0] out16b;
+    
     initial begin
         clk = 0;
         rst_n = 0;
@@ -18,5 +20,6 @@ module lfsr_testbench();
         clk = ~clk;
     end
     
-    lfsr_4b rng(clk, rst_n, out);
+    lfsr_4b rng4(clk, rst_n, out4b);
+    lfsr_16b rng16(clk, rst_n, out16b);
 endmodule
