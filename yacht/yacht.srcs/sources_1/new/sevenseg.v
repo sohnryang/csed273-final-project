@@ -17,7 +17,7 @@ module bcd_to_sevenseg(
             4'b0111: outreg = 8'b11111000;  // 7
             4'b1000: outreg = 8'b10000000;  // 8
             4'b1001: outreg = 8'b10010000;  // 9
-            default: outreg = 8'b11111111;
+            default: outreg = 8'b11111111;  // off
         endcase
     end
     assign sevenseg_output = outreg;
