@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon May 29 03:48:35 2023
-# Process ID: 10216
+# Start of session at: Tue May 30 01:28:15 2023
+# Process ID: 14536
 # Current directory: C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.runs/synth_1
 # Command line: vivado.exe -log yacht_main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source yacht_main.tcl
 # Log file: C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.runs/synth_1/yacht_main.vds

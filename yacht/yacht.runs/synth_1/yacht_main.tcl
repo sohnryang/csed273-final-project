@@ -87,6 +87,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/dice.v
+  C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/fsm.v
   C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/lfsr.v
   C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/main.v
 }

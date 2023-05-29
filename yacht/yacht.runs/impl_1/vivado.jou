@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue May 30 01:28:54 2023
+# Process ID: 2428
+# Current directory: C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.runs/impl_1
+# Command line: vivado.exe -log yacht_main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source yacht_main.tcl -notrace
+# Log file: C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.runs/impl_1/yacht_main.vdi
+# Journal file: C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.runs/impl_1\vivado.jou
+# Running On: DESKTOP-3IO4RSP, OS: Windows, CPU Frequency: 3793 MHz, CPU Physical cores: 16, Host memory: 14907 MB
+#-----------------------------------------------------------
+source yacht_main.tcl -notrace

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1685377727">
+  <File Type="ROUTE-PWR" Name="yacht_main_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="yacht_main.tcl"/>
+  <File Type="BITSTR-MMI" Name="yacht_main.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="yacht_main_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="yacht_main_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="yacht_main_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="yacht_main_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="yacht_main_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="yacht_main_opt.dcp"/>
+  <File Type="OPT-DRC" Name="yacht_main_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="yacht_main.hwdef"/>
+  <File Type="PWROPT-DCP" Name="yacht_main_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="yacht_main_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="yacht_main_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="yacht_main_placed.dcp"/>
+  <File Type="PLACE-IO" Name="yacht_main_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="yacht_main_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="yacht_main_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="yacht_main_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="yacht_main_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="yacht_main_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="yacht_main_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="yacht_main.bin"/>
+  <File Type="PLACE-TIMING" Name="yacht_main_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="yacht_main_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="yacht_main.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="yacht_main_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="yacht_main_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="yacht_main_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="yacht_main.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="yacht_main_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="yacht_main_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="yacht_main_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="yacht_main_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="yacht_main_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="yacht_main_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="yacht_main_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="yacht_main_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="yacht_main_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="yacht_main_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="yacht_main_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="yacht_main_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="yacht_main_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="yacht_main_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="yacht_main_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="yacht_main_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="yacht_main_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="yacht_main_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="yacht_main_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="yacht_main_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="yacht_main_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="yacht_main_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="yacht_main_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="yacht_main_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="yacht_main_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="yacht_main_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="yacht_main_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="yacht_main.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="yacht_main_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="yacht_main_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="yacht_main.nky"/>
+  <File Type="BITSTR-BMM" Name="yacht_main_bd.bmm"/>
+  <File Type="PDI-FILE" Name="yacht_main.pdi"/>
+  <File Type="RCFI_FILE" Name="yacht_main.rcfi"/>
+  <File Type="CFI_FILE" Name="yacht_main.cfi"/>
+  <File Type="RNPI_FILE" Name="yacht_main.rnpi"/>
+  <File Type="NPI_FILE" Name="yacht_main.npi"/>
+  <File Type="RBD_FILE" Name="yacht_main.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="yacht_main.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="yacht_main.sysdef"/>
+  <File Type="BG-BGN" Name="yacht_main.bgn"/>
+  <File Type="BG-DRC" Name="yacht_main.drc"/>
+  <File Type="RDI-RDI" Name="yacht_main.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/dice.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fsm.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/lfsr.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/main.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="yacht_main"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/constr.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constr.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/yacht_dices.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

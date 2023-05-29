@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1685299713" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/yacht_dices.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1685377688" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/yacht_dices.dcp">
   <File Type="PA-TCL" Name="yacht_main.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="yacht_main_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="yacht_main_reports.tcl"/>
   <File Type="RDS-RDS" Name="yacht_main.vds"/>
   <File Type="RDS-UTIL" Name="yacht_main_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="yacht_main_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="yacht_main.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="yacht_main_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="yacht_main_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/dice.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fsm.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
