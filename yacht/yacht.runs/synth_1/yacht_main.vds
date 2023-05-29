@@ -1,0 +1,481 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Mon May 29 03:48:35 2023
+# Process ID: 10216
+# Current directory: C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.runs/synth_1
+# Command line: vivado.exe -log yacht_main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source yacht_main.tcl
+# Log file: C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.runs/synth_1/yacht_main.vds
+# Journal file: C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.runs/synth_1\vivado.jou
+# Running On: DESKTOP-3IO4RSP, OS: Windows, CPU Frequency: 3793 MHz, CPU Physical cores: 16, Host memory: 14907 MB
+#-----------------------------------------------------------
+source yacht_main.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/utils_1/imports/synth_1/yacht_dices.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/utils_1/imports/synth_1/yacht_dices.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top yacht_main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7616
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1261.008 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'yacht_main' [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/main.v:3]
+INFO: [Synth 8-6157] synthesizing module 'yacht_dices' [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/dice.v:19]
+INFO: [Synth 8-6157] synthesizing module 'lfsr_16b' [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/lfsr.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr_16b' (1#1) [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/lfsr.v:25]
+INFO: [Synth 8-6157] synthesizing module 'dice_register' [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/dice.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'dice_register' (2#1) [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/dice.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'yacht_dices' (3#1) [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/dice.v:19]
+WARNING: [Synth 8-6014] Unused sequential element current_dice_bits_reg was removed.  [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/main.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'yacht_main' (4#1) [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/sources_1/new/main.v:3]
+WARNING: [Synth 8-3917] design yacht_main has port ss_sel[3] driven by constant 0
+WARNING: [Synth 8-3917] design yacht_main has port ss_sel[2] driven by constant 0
+WARNING: [Synth 8-3917] design yacht_main has port ss_sel[1] driven by constant 0
+WARNING: [Synth 8-3917] design yacht_main has port ss_sel[0] driven by constant 0
+WARNING: [Synth 8-7129] Port ss_display[7] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[6] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[5] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[4] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[3] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[2] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[1] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_button in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prev_button in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port throw_button in module yacht_main is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1261.008 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1261.008 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1261.008 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1261.008 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnBottom'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnCenter'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnLeft'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnRight'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnTop'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnBottom'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnCenter'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnLeft'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnRight'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnTop'. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.srcs/constrs_1/new/constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/yacht_main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/yacht_main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.973 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1285.973 ; gain = 0.000
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design yacht_main has port ss_sel[3] driven by constant 0
+WARNING: [Synth 8-3917] design yacht_main has port ss_sel[2] driven by constant 0
+WARNING: [Synth 8-3917] design yacht_main has port ss_sel[1] driven by constant 0
+WARNING: [Synth 8-3917] design yacht_main has port ss_sel[0] driven by constant 0
+WARNING: [Synth 8-7129] Port ss_display[7] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[6] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[5] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[4] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[3] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[2] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ss_display[1] in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port next_button in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prev_button in module yacht_main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port throw_button in module yacht_main is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     1|
+|3     |FDRE  |     1|
+|4     |IBUF  |     1|
+|5     |OBUF  |     5|
+|6     |OBUFT |     7|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1285.973 ; gain = 24.965
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1285.973 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1285.973 ; gain = 24.965
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.973 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.973 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 536faa12
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 106 Warnings, 74 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1285.973 ; gain = 24.965
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/PLUS/curling_grad/csed273-final-project/yacht/yacht.runs/synth_1/yacht_main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file yacht_main_utilization_synth.rpt -pb yacht_main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May 29 03:49:02 2023...
