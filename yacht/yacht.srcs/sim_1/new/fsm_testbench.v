@@ -1,4 +1,4 @@
-// fsm_ testbench
+// fsm_testbench
 
 module statefsm_tb();
     reg clk, reset_n;
