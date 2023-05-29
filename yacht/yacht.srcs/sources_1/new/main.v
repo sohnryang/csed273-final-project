@@ -10,8 +10,6 @@ module yacht_main(
     );
     reg reset_n;
     reg [1:0] initial_clock_count;
-    reg [14:0] current_dice_bits;
-    wire [14:0] dice_rng_output;
     
     // Initialize registers.
     initial begin
@@ -36,6 +34,8 @@ module yacht_main(
             current_dice_bits <= dice_rng_output;
     end
     
+    reg [14:0] current_dice_bits;
+    wire [14:0] dice_rng_output;
     yacht_dices dice_rng(
         clk,
         reset_n,
