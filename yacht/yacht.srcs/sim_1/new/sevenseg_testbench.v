@@ -1,6 +1,9 @@
 `timescale 1ns / 1ps
 
 module sevenseg_testbench();
+    reg [3:0] bcd_input;
+    wire [7:0] sevenseg_output;
+    
     integer i;
     initial begin
         for (i = 0; i <= 10; i = i + 1) begin
@@ -10,7 +13,5 @@ module sevenseg_testbench();
         $finish();
     end
     
-    reg [3:0] bcd_input;
-    wire [7:0] sevenseg_output;
     bcd_to_sevenseg mod(bcd_input, sevenseg_output);
 endmodule
