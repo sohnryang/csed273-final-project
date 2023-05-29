@@ -45,4 +45,10 @@ module yacht_main(
         dice_rng_output[11: 9],
         dice_rng_output[14:12]
     );
+    
+    wire [3:0] score_type_state;
+    wire [1:0] fsm_input;
+    assign fsm_input[0] = prev_button;
+    assign fsm_input[1] = next_button;
+    statefsm score_type_fsm(clk, reset_n, fsm_input, score_type_state);
 endmodule
