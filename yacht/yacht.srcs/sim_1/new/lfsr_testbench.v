@@ -2,15 +2,15 @@
 
 // Testbench for LFSR.
 module lfsr_testbench();
-    reg clk, rst_n;
+    reg clk, reset_n;
     wire [3:0] out4b;
     wire [15:0] out16b;
     
     initial begin
         clk = 0;
-        rst_n = 0;
+        reset_n = 0;
         #15
-        rst_n = 1;
+        reset_n = 1;
         #200
         $finish();
     end
@@ -20,6 +20,6 @@ module lfsr_testbench();
         clk = ~clk;
     end
     
-    lfsr_4b rng4(clk, rst_n, out4b);
-    lfsr_16b rng16(clk, rst_n, out16b);
+    lfsr_4b rng4(clk, reset_n, out4b);
+    lfsr_16b rng16(clk, reset_n, out16b);
 endmodule
