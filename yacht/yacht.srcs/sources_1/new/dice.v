@@ -16,6 +16,25 @@ module dice_register(
     assign out = outreg;
 endmodule
 
+module dice_decode(
+    input [2:0] dice_input,
+    output [5:0] out
+    );
+    reg [5:0] outreg;
+    always @(dice_input) begin
+        case (dice_input)
+            3'd0: outreg = 6'b000001;
+            3'd1: outreg = 6'b000010;
+            3'd2: outreg = 6'b000100;
+            3'd3: outreg = 6'b001000;
+            3'd4: outreg = 6'b010000;
+            3'd5: outreg = 6'b100000;
+            default: outreg = 6'b0;
+        endcase
+    end
+    assign out = outreg;
+endmodule
+
 module yacht_dices(
     input clk,
     input rst_n,
