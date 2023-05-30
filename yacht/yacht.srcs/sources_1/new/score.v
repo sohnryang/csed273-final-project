@@ -1,16 +1,16 @@
 `timescale 1ns / 1ps
- module fulladder(input in_a,input in_b,input in_c, output out_s, output out_c);
-    assign out_s= in_a ^in_b^in_c;
-    assign out_c= in_a&in_b |in_b&in_c |in_c&in_a;
-    
- endmodule
+
+module fulladder(input in_a,input in_b,input in_c, output out_s, output out_c);
+    assign out_s = in_a ^ in_b ^ in_c;
+    assign out_c = in_a & in_b | in_b & in_c | in_c & in_a;
+endmodule
+
 module adder(input[2:0] add_1, input add_2, output [2:0]sum);
     wire c_1,c_2,c_3;
     fulladder FA1(add_1[0],add_2,1'b0,sum[0],c_1);
     fulladder FA2(add_1[1],1'b0,c_1,sum[1],c_2);
     fulladder FA3(add_1[2],1'b0,c_2,sum[2],c_3);
 endmodule
-
 
 module sixbitadder(
     input [5:0] in_a,
@@ -19,10 +19,6 @@ module sixbitadder(
     output [5:0] out_s,
     output out_c
     );
-
-    ////////////////////////
-    /* Add your code here */
-    ////////////////////////
     wire [5:0] c;
     assign c[0] = in_c;
 
@@ -32,7 +28,6 @@ module sixbitadder(
     fullAdder f4(in_a[3], in_b[3], c[3], out_s[3], c[4]);
     fullAdder f5(in_a[4], in_b[4], c[4], out_s[4], c[5]);
     fullAdder f6(in_a[5], in_b[5], c[5], out_s[5], out_c);
-
 endmodule
 
 module score_ones(
@@ -67,7 +62,7 @@ module score_twos(
     counter CT5(point,dice_0[1],point_out);
 endmodule
 
-module score_Threes(
+module score_threes(
     input [5:0] dice_1,
     input [5:0] dice_2,
     input [5:0] dice_3,
@@ -83,7 +78,7 @@ module score_Threes(
     counter CTh5(point,dice_0[1],point_out);
 endmodule
 
-module score_Fours(
+module score_fours(
     input [5:0] dice_1,
     input [5:0] dice_2,
     input [5:0] dice_3,
@@ -99,7 +94,7 @@ module score_Fours(
     counter CF5(point,dice_0[1],point_out);
 endmodule
 
-module score_Fives(
+module score_fives(
     input [5:0] dice_1,
     input [5:0] dice_2,
     input [5:0] dice_3,
@@ -115,7 +110,7 @@ module score_Fives(
     counter CFi5(point,dice_0[1],point_out);
 endmodule
 
-module score_Sixs(
+module score_sixes(
     input [5:0] dice_1,
     input [5:0] dice_2,
     input [5:0] dice_3,
@@ -163,10 +158,6 @@ module score_four_of_a_kind(
                      dice_num[0]& dice_num[1]& dice_num[2]&~dice_num[3]&~dice_num[4]& dice_num[5]|
                      dice_num[0]& dice_num[1]& dice_num[2]&~dice_num[3]& dice_num[4]&~dice_num[5]|
                      dice_num[0]& dice_num[1]& dice_num[2]& dice_num[3]&~dice_num[4]&~dice_num[5];
-                     
-                     
-    
-    
 endmodule
 
 
@@ -257,5 +248,4 @@ module score_choice(
     sixbitadder SA2(sum_0,{0,0,0,dice_2},c[0],sum_1,c[1]);
     sixbitadder SA3(sum_1,{0,0,0,dice_3},c[1],sum_2,c[2]);
     sixbitadder SA4(sum_2,{0,0,0,dice_4},c[2],point_sum,c[3]);
-    
 endmodule
