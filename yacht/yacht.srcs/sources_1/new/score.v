@@ -83,7 +83,7 @@ module score_big_straight(
         if (point_nonzero)
             outreg = 6'd30;
         else
-            outreg = 6;d0;
+            outreg = 6'd0;
     end
     assign point_out = outreg;
 endmodule
