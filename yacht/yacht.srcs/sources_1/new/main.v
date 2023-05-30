@@ -5,6 +5,7 @@ module yacht_main(
     input next_button,
     input prev_button,
     input throw_button,
+    output [14:0] dice_led,
     output [7:0] ss_display,
     output [3:0] ss_sel
     );
@@ -38,6 +39,11 @@ module yacht_main(
             current_dice_bits <= dice_rng_output;
     end
     
+    assign dice_led[ 2: 0] = current_dice_bits[ 2: 0];
+    assign dice_led[ 5: 3] = current_dice_bits[ 5: 3];
+    assign dice_led[ 8: 6] = current_dice_bits[ 8: 6];
+    assign dice_led[11: 9] = current_dice_bits[11: 9];
+    assign dice_led[14:12] = current_dice_bits[14:12]; 
     yacht_dices dice_rng(
         clk,
         reset_n,
