@@ -26,7 +26,7 @@ endmodule
 module sevenseg_renderer(
     input clk,
     input reset_n,
-    input [15:0] seg_input,
+    input [31:0] seg_input,
     output [7:0] ss_display,
     output [3:0] ss_sel
     );
@@ -36,10 +36,10 @@ module sevenseg_renderer(
     integer refresh_counter;
     parameter refresh_interval = 100_000;
     
-    bcd_to_sevenseg pos0(seg_input[ 3: 0], seg0);
-    bcd_to_sevenseg pos1(seg_input[ 7: 4], seg1);
-    bcd_to_sevenseg pos2(seg_input[11: 8], seg2);
-    bcd_to_sevenseg pos3(seg_input[15:12], seg3);
+    assign seg0 = seg_input[ 7: 0];
+    assign seg1 = seg_input[15: 8];
+    assign seg2 = seg_input[23:16];
+    assign seg3 = seg_input[31:24];
     
     always @(posedge clk, negedge reset_n) begin
         if (!reset_n) begin
