@@ -1,5 +1,6 @@
-// fsm_testbench
+`timescale 1ns / 1ps
 
+// fsm_testbench
 module statefsm_tb();
     reg clk, reset_n;
     always begin
