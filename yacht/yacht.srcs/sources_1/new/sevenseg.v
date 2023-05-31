@@ -22,3 +22,56 @@ module bcd_to_sevenseg(
     end
     assign sevenseg_output = outreg;
 endmodule
+
+module sevenseg_renderer(
+    input clk,
+    input reset_n,
+    input [15:0] seg_input,
+    output [7:0] ss_display,
+    output [3:0] ss_sel
+    );
+    reg [7:0] ss_display_reg;
+    reg [3:0] ss_sel_reg;
+    wire [7:0] seg0, seg1, seg2, seg3;
+    integer refresh_counter;
+    parameter refresh_interval = 100_000;
+    
+    bcd_to_sevenseg pos0(seg_input[ 3: 0], seg0);
+    bcd_to_sevenseg pos1(seg_input[ 7: 4], seg1);
+    bcd_to_sevenseg pos2(seg_input[11: 8], seg2);
+    bcd_to_sevenseg pos3(seg_input[15:12], seg3);
+    
+    always @(posedge clk, negedge reset_n) begin
+        if (!reset_n) begin
+            ss_sel_reg = 4'b1110;
+            ss_display_reg = 8'b11111111; 
+            refresh_counter = 0;
+        end
+        else begin
+            refresh_counter = refresh_counter + 1;
+            if (refresh_counter == refresh_interval) begin
+                refresh_counter = 0;
+                case (ss_sel)
+                    4'b1110: begin
+                        ss_sel_reg = 4'b1101;
+                        ss_display_reg = seg1;
+                    end
+                    4'b1101: begin
+                        ss_sel_reg = 4'b1011;
+                        ss_display_reg = seg2;
+                    end
+                    4'b1011: begin
+                        ss_sel_reg = 4'b0111;
+                        ss_display_reg = seg3;
+                    end
+                    4'b0111: begin
+                        ss_sel_reg = 4'b1110;
+                        ss_display_reg = seg0;
+                    end
+                endcase
+            end
+        end
+    end
+    assign ss_display = ss_display_reg;
+    assign ss_sel = ss_sel_reg;
+endmodule
