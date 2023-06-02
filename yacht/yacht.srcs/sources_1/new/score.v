@@ -47,6 +47,26 @@ module adder(
     assign c_out = intermediate_carrys[6];
 endmodule
 
+module dice_decode(
+    input [2:0] dice_input,
+    output [5:0] out
+    );
+    reg [5:0] outreg;
+    always @(dice_input) begin
+        case (dice_input)
+            3'd0: outreg = 6'b000001;
+            3'd1: outreg = 6'b000010;
+            3'd2: outreg = 6'b000100;
+            3'd3: outreg = 6'b001000;
+            3'd4: outreg = 6'b010000;
+            3'd5: outreg = 6'b100000;
+            default: outreg = 6'b0;
+        endcase
+    end
+    assign out = outreg;
+endmodule
+
+
 module score_ones(
     input [5:0] dice_0,
     input [5:0] dice_1,
@@ -180,16 +200,15 @@ module score_four_of_a_kind(
     input [5:0] dice_2,
     input [5:0] dice_3,
     input [5:0] dice_4,
-    output [2:0] point_out
-    );
+    output [5:0] point_out
+    );                    
     wire [5:0]dice_num;
     wire two_kind;
-    assign dice_num[0]= dice_0[0] | dice_1[0]| dice_2[0] | dice_3[0] | dice_4[0];
-    assign dice_num[1]= dice_0[1] | dice_1[1]| dice_2[1] | dice_3[1] | dice_4[1];
-    assign dice_num[2]= dice_0[2] | dice_1[2]| dice_2[2] | dice_3[2] | dice_4[2];
-    assign dice_num[3]= dice_0[3] | dice_1[3]| dice_2[3] | dice_3[3] | dice_4[3];
-    assign dice_num[4]= dice_0[4] | dice_1[4]| dice_2[4] | dice_3[4] | dice_4[4];
-    assign dice_num[5]= dice_0[5] | dice_1[5]| dice_2[5] | dice_3[5] | dice_4[5];
+    wire [5:0] one_num;
+    wire [5:0] four_num;
+    wire unique;       
+    reg [5:0]outreg;
+    assign dice_num=~( dice_0 | dice_1| dice_2 | dice_3 | dice_4);
     
     assign two_kind=~dice_num[0]&~dice_num[1]& dice_num[2]& dice_num[3]& dice_num[4]& dice_num[5]|
                     ~dice_num[0]& dice_num[1]&~dice_num[2]& dice_num[3]& dice_num[4]& dice_num[5]|
@@ -206,6 +225,145 @@ module score_four_of_a_kind(
                      dice_num[0]& dice_num[1]& dice_num[2]&~dice_num[3]&~dice_num[4]& dice_num[5]|
                      dice_num[0]& dice_num[1]& dice_num[2]&~dice_num[3]& dice_num[4]&~dice_num[5]|
                      dice_num[0]& dice_num[1]& dice_num[2]& dice_num[3]&~dice_num[4]&~dice_num[5];
+    assign one_num[0]= dice_0[0]&~dice_1[0]&~dice_2[0]&~dice_3[0]&~dice_4[0]|
+                      ~dice_0[0]& dice_1[0]&~dice_2[0]&~dice_3[0]&~dice_4[0]|
+                      ~dice_0[0]&~dice_1[0]& dice_2[0]&~dice_3[0]&~dice_4[0]|
+                      ~dice_0[0]&~dice_1[0]&~dice_2[0]& dice_3[0]&~dice_4[0]|
+                      ~dice_0[0]&~dice_1[0]&~dice_2[0]&~dice_3[0]& dice_4[0];
+    assign one_num[1]= dice_0[1]&~dice_1[1]&~dice_2[1]&~dice_3[1]&~dice_4[1]|
+                      ~dice_0[1]& dice_1[1]&~dice_2[1]&~dice_3[1]&~dice_4[1]|
+                      ~dice_0[1]&~dice_1[1]& dice_2[1]&~dice_3[1]&~dice_4[1]|
+                      ~dice_0[1]&~dice_1[1]&~dice_2[1]& dice_3[1]&~dice_4[1]|
+                      ~dice_0[1]&~dice_1[1]&~dice_2[1]&~dice_3[1]& dice_4[1];
+    assign one_num[2]= dice_0[2]&~dice_1[2]&~dice_2[2]&~dice_3[2]&~dice_4[2]|
+                      ~dice_0[2]& dice_1[2]&~dice_2[2]&~dice_3[2]&~dice_4[2]|
+                      ~dice_0[2]&~dice_1[2]& dice_2[2]&~dice_3[2]&~dice_4[2]|
+                      ~dice_0[2]&~dice_1[2]&~dice_2[2]& dice_3[2]&~dice_4[2]|
+                      ~dice_0[2]&~dice_1[2]&~dice_2[2]&~dice_3[2]& dice_4[2];
+    assign one_num[3]= dice_0[3]&~dice_1[3]&~dice_2[3]&~dice_3[3]&~dice_4[3]|
+                      ~dice_0[3]& dice_1[3]&~dice_2[3]&~dice_3[3]&~dice_4[3]|
+                      ~dice_0[3]&~dice_1[3]& dice_2[3]&~dice_3[3]&~dice_4[3]|
+                      ~dice_0[3]&~dice_1[3]&~dice_2[3]& dice_3[3]&~dice_4[3]|
+                      ~dice_0[3]&~dice_1[3]&~dice_2[3]&~dice_3[3]& dice_4[3];
+    assign one_num[4]= dice_0[4]&~dice_1[4]&~dice_2[4]&~dice_3[4]&~dice_4[4]|
+                      ~dice_0[4]& dice_1[4]&~dice_2[4]&~dice_3[4]&~dice_4[4]|
+                      ~dice_0[4]&~dice_1[4]& dice_2[4]&~dice_3[4]&~dice_4[4]|
+                      ~dice_0[4]&~dice_1[4]&~dice_2[4]& dice_3[4]&~dice_4[4]|
+                      ~dice_0[4]&~dice_1[4]&~dice_2[4]&~dice_3[4]& dice_4[4];
+    assign unique= two_kind & (one_num[0] | one_num[1]| one_num[2]| one_num[3] | one_num[4]);
+    
+    assign four_num[0]=~dice_num[0]&~one_num[0]&unique;
+    assign four_num[1]=~dice_num[1]&~one_num[1]&unique;
+    assign four_num[2]=~dice_num[2]&~one_num[2]&unique;
+    assign four_num[3]=~dice_num[3]&~one_num[3]&unique;
+    assign four_num[4]=~dice_num[4]&~one_num[4]&unique;
+    assign four_num[5]=~dice_num[5]&~one_num[5]&unique;                  
+                                
+     always @(unique) begin               
+        if (four_num[0])                      
+            outreg = 6'd4;                     
+        else if(four_num[1])                                   
+            outreg = 6'd8;       
+        else if(four_num[2])
+            outreg = 6'd12;
+        else if(four_num[3])
+            outreg = 6'd16;
+        else if(four_num[4])
+            outreg = 6'd20;
+        else if(four_num[5])
+            outreg = 6'd24;
+        else
+            outreg = 6'd0;              
+    end                                         
+    assign point_out = outreg;                                                                      
+                                
+endmodule
+
+module score_fullhouse(    
+    input [2:0] dice_in_0,         
+    input [2:0] dice_in_1,         
+    input [2:0] dice_in_2,         
+    input [2:0] dice_in_3,         
+    input [2:0] dice_in_4,       
+    output [5:0] point_out      
+    );
+    wire[5:0] dice_0,dice_1,dice_2,dice_3,dice_4,dice_5;                          
+    wire [5:0]dice_num;
+    wire two_kind;
+    wire [5:0] one_num;
+    wire [5:0] four_num;
+    wire not_unique;       
+    reg [5:0]outreg;
+    
+    wire [5:0] sum_0, sum_1, sum_2, sum_3,sum_4;
+    wire [4:0] c;
+    
+    dice_decode De0(dice_in_0,dice_0);
+    dice_decode De1(dice_in_1,dice_1);
+    dice_decode De2(dice_in_2,dice_2);
+    dice_decode De3(dice_in_3,dice_3);
+    dice_decode De4(dice_in_4,dice_4);
+    dice_decode De5(dice_in_5,dice_5);
+    
+    assign dice_num=~( dice_0 | dice_1| dice_2 | dice_3 | dice_4);
+    
+    assign two_kind=~dice_num[0]&~dice_num[1]& dice_num[2]& dice_num[3]& dice_num[4]& dice_num[5]|
+                    ~dice_num[0]& dice_num[1]&~dice_num[2]& dice_num[3]& dice_num[4]& dice_num[5]|
+                    ~dice_num[0]& dice_num[1]& dice_num[2]&~dice_num[3]& dice_num[4]& dice_num[5]|
+                    ~dice_num[0]& dice_num[1]& dice_num[2]& dice_num[3]&~dice_num[4]& dice_num[5]|
+                    ~dice_num[0]& dice_num[1]& dice_num[2]& dice_num[3]& dice_num[4]&~dice_num[5]|
+                     dice_num[0]&~dice_num[1]&~dice_num[2]& dice_num[3]& dice_num[4]& dice_num[5]|
+                     dice_num[0]&~dice_num[1]& dice_num[2]&~dice_num[3]& dice_num[4]& dice_num[5]|
+                     dice_num[0]&~dice_num[1]& dice_num[2]& dice_num[3]&~dice_num[4]& dice_num[5]|
+                     dice_num[0]&~dice_num[1]& dice_num[2]& dice_num[3]& dice_num[4]&~dice_num[5]|
+                     dice_num[0]& dice_num[1]&~dice_num[2]&~dice_num[3]& dice_num[4]& dice_num[5]|
+                     dice_num[0]& dice_num[1]&~dice_num[2]& dice_num[3]&~dice_num[4]& dice_num[5]|
+                     dice_num[0]& dice_num[1]&~dice_num[2]& dice_num[3]& dice_num[4]&~dice_num[5]|
+                     dice_num[0]& dice_num[1]& dice_num[2]&~dice_num[3]&~dice_num[4]& dice_num[5]|
+                     dice_num[0]& dice_num[1]& dice_num[2]&~dice_num[3]& dice_num[4]&~dice_num[5]|
+                     dice_num[0]& dice_num[1]& dice_num[2]& dice_num[3]&~dice_num[4]&~dice_num[5];
+    assign one_num[0]= dice_0[0]&~dice_1[0]&~dice_2[0]&~dice_3[0]&~dice_4[0]|
+                      ~dice_0[0]& dice_1[0]&~dice_2[0]&~dice_3[0]&~dice_4[0]|
+                      ~dice_0[0]&~dice_1[0]& dice_2[0]&~dice_3[0]&~dice_4[0]|
+                      ~dice_0[0]&~dice_1[0]&~dice_2[0]& dice_3[0]&~dice_4[0]|
+                      ~dice_0[0]&~dice_1[0]&~dice_2[0]&~dice_3[0]& dice_4[0];
+    assign one_num[1]= dice_0[1]&~dice_1[1]&~dice_2[1]&~dice_3[1]&~dice_4[1]|
+                      ~dice_0[1]& dice_1[1]&~dice_2[1]&~dice_3[1]&~dice_4[1]|
+                      ~dice_0[1]&~dice_1[1]& dice_2[1]&~dice_3[1]&~dice_4[1]|
+                      ~dice_0[1]&~dice_1[1]&~dice_2[1]& dice_3[1]&~dice_4[1]|
+                      ~dice_0[1]&~dice_1[1]&~dice_2[1]&~dice_3[1]& dice_4[1];
+    assign one_num[2]= dice_0[2]&~dice_1[2]&~dice_2[2]&~dice_3[2]&~dice_4[2]|
+                      ~dice_0[2]& dice_1[2]&~dice_2[2]&~dice_3[2]&~dice_4[2]|
+                      ~dice_0[2]&~dice_1[2]& dice_2[2]&~dice_3[2]&~dice_4[2]|
+                      ~dice_0[2]&~dice_1[2]&~dice_2[2]& dice_3[2]&~dice_4[2]|
+                      ~dice_0[2]&~dice_1[2]&~dice_2[2]&~dice_3[2]& dice_4[2];
+    assign one_num[3]= dice_0[3]&~dice_1[3]&~dice_2[3]&~dice_3[3]&~dice_4[3]|
+                      ~dice_0[3]& dice_1[3]&~dice_2[3]&~dice_3[3]&~dice_4[3]|
+                      ~dice_0[3]&~dice_1[3]& dice_2[3]&~dice_3[3]&~dice_4[3]|
+                      ~dice_0[3]&~dice_1[3]&~dice_2[3]& dice_3[3]&~dice_4[3]|
+                      ~dice_0[3]&~dice_1[3]&~dice_2[3]&~dice_3[3]& dice_4[3];
+    assign one_num[4]= dice_0[4]&~dice_1[4]&~dice_2[4]&~dice_3[4]&~dice_4[4]|
+                      ~dice_0[4]& dice_1[4]&~dice_2[4]&~dice_3[4]&~dice_4[4]|
+                      ~dice_0[4]&~dice_1[4]& dice_2[4]&~dice_3[4]&~dice_4[4]|
+                      ~dice_0[4]&~dice_1[4]&~dice_2[4]& dice_3[4]&~dice_4[4]|
+                      ~dice_0[4]&~dice_1[4]&~dice_2[4]&~dice_3[4]& dice_4[4];
+    assign not_unique= two_kind & ~(one_num[0] | one_num[1]| one_num[2]| one_num[3] | one_num[4]);
+    
+    adder SA_1({0, 0, 0, dice_in_0}, {0, 0, 0, dice_in_1}, 0, sum_0, c[0]);
+    adder SA_2(sum_0, {0, 0, 0, dice_in_2}, 0, sum_1, c[1]);
+    adder SA_3(sum_1, {0, 0, 0, dice_in_3}, 0, sum_2, c[2]);
+    adder SA_4(sum_2, {0, 0, 0, dice_in_4}, 0, sum_3, c[3]);
+    adder SA_5(sum_3, 6'd5, 0, sum_4, c[4]);
+    
+
+    assign point_out ={sum_4[5]&not_unique,
+                       sum_4[4]&not_unique,
+                       sum_4[3]&not_unique,
+                       sum_4[2]&not_unique,
+                       sum_4[1]&not_unique,
+                       sum_4[0]&not_unique };     
+         
+         
 endmodule
 
 
@@ -244,13 +402,13 @@ module score_big_straight(
     wire point_nonzero;
     assign dice_bit_set = dice_0 | dice_1 | dice_2 | dice_3 | dice_4;
     assign point_nonzero = dice_bit_set[1] & dice_bit_set[2] & dice_bit_set[3] & dice_bit_set[4] & dice_bit_set[5];
-    always @(point_nonzero) begin
-        if (point_nonzero)
-            outreg = 6'd30;
-        else
-            outreg = 6'd0;
-    end
-    assign point_out = outreg;
+    always @(point_nonzero) begin               
+        if (point_nonzero)                      
+            outreg = 6'd30;                     
+        else                                    
+            outreg = 6'd0;                      
+    end                                         
+    assign point_out = outreg;                  
 endmodule
 
 module score_yacht(
